@@ -1,0 +1,23 @@
+/*
+Motion Sensor
+Flashes an LED when motion is sensed
+*/
+
+int Motion = 0;
+
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  Motion = digitalRead(2);
+  if (Motion == HIGH) {
+    digitalWrite(LED_BUILTIN, HIGH);
+  } else {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
