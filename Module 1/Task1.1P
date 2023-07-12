@@ -19,5 +19,6 @@ void loop()
   } else {
     digitalWrite(LED_BUILTIN, LOW);
   }
+  Serial.println(Motion);
   delay(10); // Delay a little bit to improve simulation performance
 }
